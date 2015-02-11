@@ -1,0 +1,54 @@
+# Needs a higher priority than c.snippets
+priority 1
+
+snippet ponce
+#pragma once
+${0}
+endsnippet
+
+snippet for "for (auto i : x)"
+for (auto ${1:i} : ${3:x}) {
+	${VISUAL}${4}
+}
+${0}
+endsnippet
+
+snippet fori "for (int i) {}"
+for (int ${1:i} = 0; $1 < ${2:count}; ${3:++$1}) {
+	${VISUAL}${4}
+}
+${0}
+endsnippet
+
+snippet class "class .. (class)"
+class ${1:`!p snip.rv = snip.basename or "name"`} {
+public:
+	${1/(\w+).*/$1/}(${2});
+	~${1/(\w+).*/$1/}();
+	${3}
+	${1/(\w+).*/$1/}(const ${1/(\w+).*/$1/}&) = delete;
+	${1/(\w+).*/$1/}& operator=(const ${1/(\w+).*/$1/}&) = delete;
+private:
+	${4}
+};
+${0}
+endsnippet
+
+snippet mfunc "member function"
+${1:void} ${2:`!p snip.rv = snip.basename or "ClassName"`}::${4:memberFunction}(${5}) {
+	${6}
+}
+${0}
+endsnippet
+
+snippet unique "unique_ptr" i
+std::unique_ptr<${VISUAL}${1}>${0}
+endsnippet
+
+snippet shared "shared_ptr" i
+std::shared_ptr<${VISUAL}${1}>${0}
+endsnippet
+
+snippet vector "vector" i
+std::vector<${VISUAL}${1}>${0}
+endsnippet

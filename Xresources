@@ -1,0 +1,58 @@
+! terminal colours
+*foreground:#a0a0a0
+*background:#1b1d1e
+
+!molokai inspired colors
+
+!black
+*color0:    #1b1d1e
+*color8:    #505354
+!red
+*color1:    #d7005f
+*color9:    #ff5995
+!green
+*color2:    #87ff00
+*color10:   #b6e354
+!yellow
+*color3:    #fd971f
+*color11:   #feed6c
+!blue
+*color4:    #56c2d6
+*color12:   #8cedff
+!magenta
+*color5:    #af6fff
+*color13:   #9e6ffe
+!cyan
+*color6:    #5fd7ff
+*color14:   #899ca1
+!white
+*color7:    #ccccc6
+*color15:   #f8f8f2
+
+URxvt*font: xft:DejaVu Sans Mono:pixelsize=12:antialias=true:hinting=true
+URxvt*boldFont: xft:DejaVu Sans Mono:bold:pixelsize=12:antialias=true:hinting=true
+
+urxvt*inheritPixmap: false
+urxvt*transparent: false
+
+! fix rxvt character spacing
+URxvt*letterSpace: -1
+
+URxvt*saveLines: 12000
+URxvt*scrollBar: false
+
+! plugins from https://github.com/muennich/urxvt-perls
+URxvt.perl-ext-common: clipboard,url-select
+
+!URxvt.keysym.M-c:   perl:clipboard:copy
+!URxvt.keysym.C-v:   perl:clipboard:paste
+!URxvt.keysym.M-C-v: perl:clipboard:paste_escaped
+URxvt.clipboard.autocopy: true
+
+URxvt.clipboard.copycmd:  xclip -i -selection clipboard
+URxvt.clipboard.pastecmd: xclip -o -selection clipboard
+
+!URxvt.keysym.M-u: perl:url-select:select_next
+URxvt.url-select.button: 1
+URxvt.url-select.underline: true
+
