@@ -36,7 +36,7 @@ urxvt*inheritPixmap: false
 urxvt*transparent: false
 
 ! fix rxvt character spacing
-URxvt*letterSpace: -1
+! URxvt*letterSpace: -1
 
 URxvt*saveLines: 12000
 URxvt*scrollBar: false

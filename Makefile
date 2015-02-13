@@ -1,11 +1,10 @@
-install:
-	install-vim install-fish install-awesome install-tmux \
-	install-xresources install-urxvt
-
 install-vim:
 	rm -rf ~/.vim ~/.vimrc
 	ln -s `pwd`/vim ~/.vim
 	ln -s ~/.vim/vimrc ~/.vimrc
+	mkdir -p ~/.vim/tmp/backup
+	mkdir -p ~/.vim/tmp/swp
+	mkdir -p ~/.vim/tmp/undo
 	mkdir -p ~/.vim/bundle
 	git clone https://github.com/Shougo/neobundle.vim ~/.vim/bundle/neobundle.vim
 	vim +NeoBundleInstall +qall
