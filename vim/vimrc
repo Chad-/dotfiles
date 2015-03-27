@@ -442,6 +442,8 @@ else
   set guioptions-=m
   set guioptions-=L
   set guioptions-=r
+  
+  set guifont=DejaVu_Sans_Mono:h10
 endif
 
 " Change search highlight to green
